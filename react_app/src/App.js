@@ -1,6 +1,8 @@
 // import Search from './search';
 import FilterData from './filterData';
+import ApiData from './apiFetch';
 import React, { Component } from 'react';
+import ApiFetch from './apiFetch';
 // import MyComponent from './myComponent';
 // import AssignmentOne from './assignment1';
 
@@ -32,6 +34,8 @@ class App extends Component {
         {/* <Search/> */}
 
         <FilterData/>
+
+        {/* <ApiFetch/> */}
       </div>
     );
   }

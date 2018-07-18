@@ -7,8 +7,6 @@ const Employee = ({ name, gender, company }) =>
         <td>{ gender } </td>
         <td>{ company } </td>
     </tr>;
-                            
-const Pages = ({ page }) => <span > { page } </span>;
 
 class FilterData extends React.Component {
 
@@ -17,18 +15,20 @@ class FilterData extends React.Component {
 
         this.state = {
             query:'',
-            currentPage:1,
             perPage:10,
-            pages: Array.from(new Array( Math.ceil(Employees.length/10) ),(val,index)=>index+1),
-            currentEmployees: Employees.slice(0, 10)
+            currentPage:1,
+            currentEmployees: Employees.slice(0, 10),
+            pages: Array.from(new Array( Math.ceil(Employees.length/10) ),(val,index)=>index+1)
         };
-  
+        
+        this.sortData = this.sortData.bind(this);
         this.dataCount = this.dataCount.bind(this);
         this.updatePage = this.updatePage.bind(this);
         this.setSearchQuery = this.setSearchQuery.bind(this);
         
     };
     
+    // FUNCTION TO CALCULATE DATAS, PAGES, PAGENUMBERS
     dataCount(count) {
         
         let pages = 0,
@@ -46,13 +46,13 @@ class FilterData extends React.Component {
         currentEmployees = Employees.slice( dataFrom, dataUpto );
 
         this.setState({ 
-            currentEmployees,
             pages,
+            currentEmployees,
             perPage:inputCount
         });
-        // console.log(this.state.pages)
     }
    
+    // FUNCTION TO SET SEARCH QUERY IN STATE
     setSearchQuery(query) {
 
         this.setState({
@@ -70,6 +70,7 @@ class FilterData extends React.Component {
         // textArr.filter((word) => word.name.toLowerCase().includes(query.target.value.toLowerCase()));
     }   
 
+    // FUNCTION THAT UPDATE CURRENTPAGE NUMBERS
     async updatePage(page) {
 
         let $elem = document.getElementById(this.state.currentPage);
@@ -86,6 +87,12 @@ class FilterData extends React.Component {
         this.dataCount();
     }
 
+    // SORTING DATA
+    sortData() {
+        alert();
+    }
+
+    // RENDER FUNCTION OF REACT FROM WHERE VIEW IS RENDERED
     render() {
 
         return <div className="filter-table-container clearfix">
@@ -101,7 +108,7 @@ class FilterData extends React.Component {
                     <table className="filter-table">
                         <thead>
                             <tr className="table-header">
-                                <td>Name</td>
+                                <td >Name</td>
                                 <td>Gender</td>
                                 <td>Company</td>
                             </tr>
@@ -110,10 +117,17 @@ class FilterData extends React.Component {
                             { this.state.currentEmployees
                                 .filter((employee) => 
                                     employee.name.toLowerCase().includes(this.state.query.toLowerCase())
-                                    || employee.gender.toLowerCase().includes(this.state.query.toLowerCase())            
-                                    || employee.company.toLowerCase().includes(this.state.query.toLowerCase())            
+                                    || employee.gender.toLowerCase().startsWith(this.state.query.toLowerCase())            
+                                    || employee.company.toLowerCase().includes(this.state.query.toLowerCase()) 
                                 )
-                                .map((employee, index) => <Employee key={ index } { ...employee } />)}
+                                .map(function( employee, index) {
+                                    
+                                    if(employee)
+                                        return <Employee key={ index } { ...employee } /> ;
+                                    else
+                                        <h2>NO DATA</h2>
+                                    }
+                                )}
                         </tbody>
                     </table>
                 </div>
@@ -121,7 +135,14 @@ class FilterData extends React.Component {
                    { this.state.pages.map(( page ) => 
                         <span key={ page } id={ page }  onClick={ ()=> this.updatePage( page ) } >{ page }</span>
                     )}
-                    {/* { this.state.pages.map(( pageNo, index ) => <Pages key= { index } page = { pageNo }/>)} */}
+
+                    <div className="total-data-count">
+                    Viewed <span>{ 
+                            ( this.state.perPage * this.state.currentPage > Employees.length ) 
+                            ? Employees.length :
+                            this.state.perPage * this.state.currentPage }
+                         </span> out of <span>{ Employees.length }</span>
+                    </div> 
                 </div>
             </div>
     }

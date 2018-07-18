@@ -117,3 +117,7 @@ span.active {
   color:red;
   background-color: red;
 }
+
+.total-data-count {
+  float: right;
+}
