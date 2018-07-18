@@ -1,2 +1,2 @@
 # ReactJs
-This Exercise on ReactJs 
+This is Exercise on ReactJs 
