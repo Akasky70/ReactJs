@@ -1,0 +1,151 @@
+.form-table {
+    width:100%;
+    
+}
+  
+.submit-bottom {
+  
+    width:100%;
+    padding:10px;
+    background-color: rgba(48, 130, 252, 0.4);
+    border:1px solid rgba(48, 130, 252, 0.5);
+    margin-top:20px;
+}
+  
+.form-table input {
+    width: 96%;
+    padding:10px;
+    background-color: transparent;
+    outline:none;
+    border:none;
+    border-bottom:2px solid rgba(48, 62, 247, 0.5);
+    
+}
+  
+  
+  /* filter table assignment 3 design*/
+.filter-table-container{
+    width:1140px;
+    margin: 30px auto;
+}
+.filter-table {
+  
+    width:100%;
+    
+}
+
+.table-body-tr {
+    background-color: rgba(0, 174, 255, 0.541);
+   
+}
+  
+.table-header {
+    background-color: rgba(233, 10, 10, 0.616);
+    text-align: center;
+    font-weight: bold;
+}
+  
+.table-body-tr td, .table-header td {
+    padding: 10px;
+}
+  
+  /* flter input design */
+.filter-table-container input {
+    width: 300px;
+    padding:10px;
+    background-color: transparent;
+    outline:none;
+    border:2px solid rgba(0, 174, 255, 0.541);
+    margin-bottom: 20px;
+}
+  
+.search-button {
+    background-color: transparent;
+    outline:none;
+    border:2px solid rgba(0, 174, 255, 0.541);
+    margin-bottom: 20px;
+    padding: 10px;
+}
+  
+.search-button:hover {
+    background-color: rgba(0, 174, 255, 0.541);
+    color:white;
+    cursor: pointer;
+}
+  
+.filter-table-container select {
+    width: 80px;
+    padding:10px;
+    background-color: transparent;
+    outline:none;
+    border:2px solid rgba(0, 174, 255, 0.541);
+    margin-bottom: 20px;
+    float:left;
+}
+  
+.page-number{
+    margin: 10px 0px;
+  
+}
+.page-number span{
+    /* width:40px;
+    height: 30px; */
+    background-color: brown;
+    padding: 8px;
+    margin-left: 5px;
+    color:white;
+    cursor: pointer;
+}
+  
+.page-number span:hover{
+    
+    background-color: rgba(165, 42, 42, 0.616);
+   
+}
+span.active {
+    background-color: rgba(0, 174, 255, 0.541);
+    color:black;
+    font-weight: bold;
+}
+  
+.highlight {
+    color:red;
+    background-color: red;
+}
+  
+.total-data-count {
+    float: right;
+}
+  
+/* ICON OF EDIT DELETE */
+.action-icon {
+    width:30px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+  
+.action-icon img{
+    width: 100%;
+}
+  
+.action-icon img:hover{
+    opacity: 0.7;
+}
+  
+#data-table{
+    position: relative;
+}
+.loader-pos {
+    /* margin: 20px auto; */
+    position:absolute;
+}
+  
+  /* todo not found in table search */
+.data-not-found td{
+    text-align: center;
+    background-color: rgba(165, 42, 42, 0.432);
+    padding: 20px;
+    color:white;
+    font-weight: bold;
+}
+

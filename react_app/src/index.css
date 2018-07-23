@@ -42,15 +42,15 @@ body {
   
 }
 
+
 /* filter table assignment 3 design*/
 .filter-table-container{
-  width:800px;
+  width:940px;
   margin: 30px auto;
 }
 .filter-table {
 
   width:100%;
-  text-align: center;
   
 }
 .table-body-tr {
@@ -60,7 +60,7 @@ body {
 
 .table-header {
   background-color: rgba(233, 10, 10, 0.616);
- 
+  text-align: center;
   font-weight: bold;
 }
 
@@ -76,6 +76,20 @@ body {
   outline:none;
   border:2px solid rgba(0, 174, 255, 0.541);
   margin-bottom: 20px;
+}
+
+.search-button {
+  background-color: transparent;
+  outline:none;
+  border:2px solid rgba(0, 174, 255, 0.541);
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.search-button:hover {
+  background-color: rgba(0, 174, 255, 0.541);
+  color:white;
+  cursor: pointer;
 }
 
 .filter-table-container select {
@@ -120,4 +134,36 @@ span.active {
 
 .total-data-count {
   float: right;
+}
+
+/* ICON OF EDIT DELETE */
+.action-icon {
+  width:30px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.action-icon img{
+  width: 100%;
+}
+
+.action-icon img:hover{
+  opacity: 0.7;
+}
+
+#data-table{
+  position: relative;
+}
+.loader-pos {
+  /* margin: 20px auto; */
+  position:absolute;
+}
+
+/* todo not found in table search */
+.data-not-found td{
+  text-align: center;
+  background-color: rgba(165, 42, 42, 0.432);
+  padding: 20px;
+  color:white;
+  font-weight: bold;
 }

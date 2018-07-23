@@ -1,0 +1,326 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix:after {
+    content: "";
+    clear:both;
+    display: table;
+}
+
+.container {
+
+    width: 100%;
+}
+
+.body-wrapper {
+    width:80%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.index-page {
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-color: rgba(0, 89, 255, 0.39);
+
+}
+
+.login-page {
+    width:100%;
+}
+.sign-up-login-wrapper{
+    width: 20%;
+    margin: 20% auto;
+    
+}
+
+.sign-up-login-wrapper a {
+    text-decoration: none;
+}
+
+.sign-up-login-button {
+    width:100%;
+    margin:10px auto;
+    border-radius:5px;
+    text-align: center;
+    padding:15px;
+    background-color: rgba(189, 11, 11, 0.823);
+    background: -webkit-linear-gradient(rgba(165, 42, 42, 0.823), rgba(189, 11, 11, 0.823));
+    background: linear-gradient(rgba(165, 42, 42, 0.823), rgba(189, 11, 11, 0.823));
+    color:white;
+    font-weight:bold;
+    cursor: pointer;
+    
+}
+
+.sign-up-login-button:hover {
+    background-color: blueviolet;
+}
+
+/*  MODEL BOX & CLOSE DESIGN */
+.ReactModal__Overlay--after-open {
+    background: #aabef8ec;
+}
+
+.model-box-title-close h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    color: gray;
+    cursor: pointer;
+    float: right;
+    margin-top:0px;
+}
+
+.model-box-title-close h3:hover {
+    color:rgba(140, 0, 255, 0.486);
+}
+.model-box-title-close h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4em;
+    color: rgb(175, 16, 16);
+    cursor: pointer;
+    float: left;
+    margin-top:0px;
+}
+
+/* LOGIN FORM DESIGN */
+.login-form input{
+    width:94.9%;
+    padding:10px;
+    background-color: transparent;
+    outline:none;
+    border:2px solid rgb(0, 132, 255);
+    margin-bottom: 20px;
+
+}
+
+.login-submit-button {
+    width:100%;
+    padding: 10px 0px;
+    text-align: center;
+    background: transparent;
+    border:2px solid rgb(0, 132, 255);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color:black;
+}
+
+.login-submit-button:hover {
+    color: white;
+    background: rgb(0, 132, 255);
+}
+
+.signup-submit-button {
+    width:97.4%;
+    margin: 5px auto 10px auto;
+    padding: 10px 0px;
+    text-align: center;
+    background: transparent;
+    border:2px solid rgb(0, 132, 255);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color:black;
+}
+
+.signup-submit-button:hover {
+    color: white;
+    background: rgb(0, 132, 255);
+}
+
+/* LOGIN MESSAGE */
+.login-msg {
+    width:100%;
+    padding: 20px 0px 0px 0px;
+    color:red;
+    /* background-color: red; */
+}
+
+/* NAVBAR DESIGN */
+.navbar-wrapper {
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.925);
+}
+
+.top-navbar {
+    width:80%;
+    margin:0 auto;
+}
+
+.top-navbar ul li {
+    float:left;
+    list-style-type:none;
+    padding: 18px 20px;
+}
+
+.top-navbar ul li:hover {
+    background-color: rgba(61, 60, 60, 0.973);
+}
+
+.top-navbar ul li a{
+   text-decoration: none;
+   color:white;
+}
+
+.signout-button {
+
+    padding: 18px;
+    color:lightgray;
+    float:right;
+    cursor: pointer;
+}
+
+.signout-button:hover {
+    color:white;
+    font-weight: bold;
+}
+
+.navbar-logo {
+    color:white;
+    font-weight: bold;
+    padding: 15px 20px 15px 0px;
+    float:left;
+    font-size: 22px;
+}
+
+.navbar-logo a {
+    color:white;
+    text-decoration: none;
+}
+
+/* SIGN UP FORM DESIGN */
+.sign-up-form {
+    width:40%;
+    margin:0 auto;
+}
+
+.sign-up-form input {
+    width:93.8%;
+    margin:5px;
+    padding: 10px;
+    border:2px solid rgba(0, 119, 255, 0.829);
+}
+
+.form-title {
+    margin:50px 5px 10px 5px;
+    text-align: center;
+}
+
+.form-title h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    color: rgba(180, 10, 10, 0.87);
+    text-shadow: 0px 0px 5px gray;
+}
+
+.form-title h1 span {
+   
+    color: rgba(0, 119, 255, 0.829);
+}
+
+.hr-design {
+    width:100%;
+    height: 2px;
+    background-color: rgba(180, 10, 10, 0.87);
+    border:none;
+    box-shadow: 0px 0px 1px black;
+    margin: 5px 0px;
+}
+
+.form-error {
+    color:red;
+    padding-left:5px;
+}
+.form-success {
+    color:rgb(0, 89, 255);
+}
+
+/* profile section navbar*/
+.navbar-right{
+	/*background-color: pink;*/
+	/* width:30%; */
+	height: 100%;
+	float:right;
+}
+.navbar-right ul li{
+	list-style-type: none;
+	float:left;
+	width:auto;
+	padding: 18px 10px;
+    position: relative;
+    color:white;
+}
+.navbar-right ul li:hover{
+	background-color: #373738;
+}
+.navbar-right ul li a{
+	text-decoration: none;
+	color:white;
+	font-family: arial;
+
+}
+.navbar-right ul li img{
+	width:10px;
+	height:10px;
+	padding-left: 10px;
+	padding-top: 5px;
+    float: right;
+}
+.navbar-right ul li ul{
+	display: none;
+	margin-top:18px;
+	left: 0;
+	
+}
+
+.navbar-right ul li ul li{
+	float: none;
+    color:white;
+    cursor: pointer;
+}
+.navbar-right ul li:hover ul{
+	display:block;
+	position: absolute;
+	background-color: #373738;
+	width:200px;
+	
+}
+
+.navbar-right ul li:hover ul li ul{
+	display:none;
+	
+}
+
+.navbar-right ul li ul li:hover{
+	
+	background-color: #595a5b;	
+
+}
+
+.sort-icon {
+	width:12px;
+	padding-left: 10px;
+	padding-top: 3px;
+    float: right;
+    cursor: pointer;
+}
+.sort-icon:hover {
+   opacity: 0.7;
+}
+.sort-icon img {
+    width:100%;
+}
+
+/* SIGN UP FOOTER */
+.signup-footer {
+    text-align:center;
+}
+
+.signup-footer p {
+    font-size: 12px;
+    padding: 5px;
+}
